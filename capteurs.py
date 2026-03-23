@@ -42,7 +42,7 @@ class ThermalSensorB :
 
 class ThermalSensorB_Adapter:
     def __init__ (self,position) :
-        self.sensor_b = ThermalSensorB(position)
+        self.sensor_b = ThermalSensorB(position) 
         self.position = position
     
     def on_detect(self, callback):
