@@ -6,7 +6,7 @@ Created on Mon Mar 23 08:57:35 2026
 
 Gestion des notifications
 """
-
+# Notification par email
 class Email_Notification:
     def __init__(self, email):
         self.email = email
@@ -14,13 +14,15 @@ class Email_Notification:
     def send (self,message) :
         print(f"Envoi email à {self.email} : {message}")
 
+# Notification par discord
 class Discord_Notification:
     def __init__(self, pseudo):
         self.pseudo = pseudo
     
     def send (self,message) :
         print(f"Envoi message discord à {self.pseudo} : {message}")
-        
+
+# Notification dans le fichier alerte.log
 class Log_Notification:
     def __init__ (self, nom_fichier='alerte.log'):
         self.nom_fichier = nom_fichier
